@@ -1,0 +1,119 @@
+This module defines a function that divides all elements of a matrix.
+
+Usage
+=====================================
+matrix_divided(matrix, div) returns a new matrix, which is all elements of matrix divided by div, rounded to 2 decimal places.
+
+::
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+>>> matrix = [
+...  [3, 6, 9],
+...  [12, 15, 18]
+... ]
+>>> print(matrix_divided(matrix, 3))
+[[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]]
+
+>>> matrix = [
+...  [3.0, 6.0, 9.0],
+...  [12, 15, 18]
+... ]
+>>> print(matrix_divided(matrix, 3))
+[[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]]
+
+The quotients are rounded to a maximum of two decimal places.
+The matrix works for both int and floats, separately or combined
+
+TypeError cases
+================
+
+- if the matrix is not a list of lists of int/floats
+::
+
+>>> matrix = "not a list"
+>>> print(matrix_divided(matrix, 3))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 17, in matrix_divided
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix = []
+>>> print(matrix_divided(matrix, 3))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 17, in matrix_divided
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> print(matrix_divided(matrix, 3))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 19, in matrix_divided
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+
+>>> matrix = [
+...  [3.0, 6.0, 9.0],
+...  [12, 15, "a"]
+... ]
+>>> print(matrix_divided(matrix, 3))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 21, in matrix_divided
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+
+>>> matrix = [[]]
+>>> print(matrix_divided(matrix, 3))
+[[]]
+
+#works because matrix is a list of lists
+
+::
+
+- if the rows in matrix is not of the same size
+>>> matrix = [
+... [1, 2, 3, 4],
+... [5, 6, 7]
+... ]
+>>> print(matrix_divided(matrix, 3))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 22, in matrix_divided
+TypeError: Each row of the matrix must have the same size
+
+::
+
+if div is not an integer or a float
+
+>>> matrix = [
+... [1, 2],
+... [3, 4]
+... ]
+>>> print(matrix_divided(matrix, "a"))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 25, in matrix_divided
+TypeError: div must be a number
+
+>>> matrix = [
+... [1, 2],
+... [3, 4]
+... ]
+>>> print(matrix_divided(matrix, None))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 25, in matrix_divided
+TypeError: div must be a number
+
+==============================
+
+- if div == 0, a ZeroDivisionError occurs
+
+>>> matrix = [
+... [1, 2],
+... [3, 4]
+... ]
+>>> print(matrix_divided(matrix, 0))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 27, in matrix_divided
+ZeroDivisionError: division by zero

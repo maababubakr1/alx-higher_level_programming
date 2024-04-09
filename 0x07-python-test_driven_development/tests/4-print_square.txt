@@ -1,0 +1,70 @@
+This module defines a function that prints a square with the character #.
+
+Usage
+==========================================
+>>> print_square = __import__('4-print_square').print_square
+>>> print_square(3)
+###
+###
+###
+
+>>> print_square(5)
+#####
+#####
+#####
+#####
+#####
+
+==========================
+
+>>> print_square(0)
+
+the function prints nothing if size = 0
+
+==================
+if size is less than 0 it raises a ValueError
+
+>>> print_square(-3)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 14, in print_square
+ValueError: size must be >= 0
+
+=========================
+if size is a float and is less than 0 it raises a TypeError
+
+>>> print_square(-3.9)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 12, in print_square
+TypeError: size must be an integer
+
+===================================
+if size is not an integer it raises a TypeError
+
+
+>>> print_square(3.9)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 12, in print_square
+TypeError: size must be an integer
+
+
+>>> print_square("string")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 12, in print_square
+TypeError: size must be an integer
+
+
+>>> print_square(None)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 12, in print_square
+TypeError: size must be an integer
+
+
+>>> print_square()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: print_square() missing 1 required positional argument: 'size'
