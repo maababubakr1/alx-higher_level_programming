@@ -1,4 +1,4 @@
-#!?/usr/bin/python3
+#!/usr/bin/python3
 """Defines python class to json function"""
 
 
