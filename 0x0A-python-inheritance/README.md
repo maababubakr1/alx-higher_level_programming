@@ -1,0 +1,1 @@
+moods of inheritance in python
