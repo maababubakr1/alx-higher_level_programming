@@ -1,15 +1,15 @@
 #!/usr/bin/python3
-""" Defines an empty class"""
+"""Defines an empty class"""
 
 
 class BaseGeometry:
-    """ A base geometry"""
+    """A base geometry"""
     def area(self):
-        """ no implementation"""
+        """no implementation"""
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
-        """ validate a parameter (as an integer)
+        """validate a parameter (as an integer)
 
         parameters:
         - name (str): the name of the parameter

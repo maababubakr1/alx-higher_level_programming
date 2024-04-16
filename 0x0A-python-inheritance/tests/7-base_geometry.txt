@@ -20,6 +20,10 @@ TypeError: BaseGeometry() takes no arguments
 
 the method area(self) is not implemented yet.
 
+>>> bg = BaseGeometry()
+    >>> print(bg.area) # doctest: +ELLIPSIS, +NORMALIZE_WHITESPACE
+    <bound method BaseGeometry.area of <7-base_geometry.BaseGeometry object at...>>
+
 >>> bg.area()
 Traceback (most recent call last):
 Exception: area() is not implemented
