@@ -107,7 +107,6 @@ class Rectangle(Base):
                 - 3rd argument should be the height attribute
                 - 4th argument should be the x attribute
                 - 5th argument should be the y attribute
-
             - **kwargs (dict): key/value pair of attribues
         """
         if args and len(args) != 0:
