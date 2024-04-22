@@ -10,16 +10,16 @@ class Rectangle(Base):
         """Initialize a new rectangle.
 
         Args:
-        - width (int): the width of the new rectangle
-        - height (int): the height og the new rectangle
-        - x (int): the x coordinate of the new rectangle
-        - y (int): the y coordinate of the new rectangle
-        - id (int): the identity of a new rectangle
+            - width (int): the width of the new rectangle
+            - height (int): the height og the new rectangle
+            - x (int): the x coordinate of the new rectangle
+            - y (int): the y coordinate of the new rectangle
+            - id (int): the identity of a new rectangle
         Raises:
-        - TypeError: if either width or height is of other type than int
-        - TypeError: if either x or y is of other type than int
-        - ValueError: if either width or height <= 0
-        - ValueError: if either x or y coordinates < 0
+            - TypeError: if either width or height is of other type than int
+            - TypeError: if either x or y is of other type than int
+            - ValueError: if either width or height <= 0
+            - ValueError: if either x or y coordinates < 0
         """
         self.width = width
         self.height = height
